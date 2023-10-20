@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                     },
                     //display icon inside textfield
 
-                    obscureText: true,
+                    obscureText: false,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.person),
                       enabledBorder: const OutlineInputBorder(
