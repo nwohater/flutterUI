@@ -5,16 +5,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
     return Scaffold(
         backgroundColor: Colors.grey[400],
         body: SafeArea(
           child: Center(
             child: Column(
-              // ignore: prefer_const_literals_to_create_immutables
               children: [
-                // ignore: prefer_const_constructors
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 const Icon(
                   Icons.apple_rounded,
                   size: 100,
@@ -55,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 SizedBox(
                   width: 300,
                   child: TextField(
@@ -76,6 +73,16 @@ class HomeScreen extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.grey.shade400),
                       ),
                     ),
+                  ),
+                ),
+                // button for login
+                const SizedBox(height: 20),
+                SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Login'),
                   ),
                 ),
               ],
