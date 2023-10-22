@@ -6,14 +6,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[400],
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Center(
             child: Column(
               children: [
                 const SizedBox(height: 25),
+                // change icon color
+
                 const Icon(
+                  // set icon color
                   Icons.apple_rounded,
+                  color: Colors.grey,
                   size: 100,
                 ),
                 const SizedBox(
@@ -33,16 +37,17 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   width: 300,
                   child: TextField(
+                    style: const TextStyle(color: Colors.black),
                     // make enter key run a function
                     onSubmitted: (String value) async {
                       // ignore: avoid_print
                       print(value);
                     },
-                    //display icon inside textfield
 
                     obscureText: false,
                     decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.person),
+                      hintText: 'User ID',
+                      prefixIcon: const Icon(Icons.person, color: Colors.white,),
                       enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
                       ),
@@ -56,6 +61,9 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   width: 300,
                   child: TextField(
+                    cursorColor: Colors.white,
+                    // change color of text
+                    style: const TextStyle(color: Colors.black),
                     // make enter key run a function
                     onSubmitted: (String value) async {
                       // ignore: avoid_print
@@ -65,7 +73,9 @@ class HomeScreen extends StatelessWidget {
 
                     obscureText: true,
                     decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.password),
+                      // add text to border when focused
+                      hintText: 'Password',
+                      prefixIcon: const Icon(Icons.password, color: Colors.white,),
                       enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
                       ),
